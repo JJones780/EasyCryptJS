@@ -61,7 +61,8 @@ function doDecrypt() {
 	if(document.user.text.value.length == 0) {alert("Please enter text to decrypt.");return;}
 	
 	try {
-		var dec = GibberishAES.dec(document.user.text.value, document.key.text.value);
+		nospacesver = document.user.text.value.replace( /\s+/g, "" );
+		var dec = GibberishAES.dec(nospacesver, document.key.text.value);
 		document.user.text.value = dec;
 	} catch (err) {
 		alert("Invalid key");

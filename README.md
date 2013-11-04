@@ -9,3 +9,8 @@ Has "you don't need to trust me - verify me easily" features:
   ( https://github.com/neodon/gibberish-aes ).
 
 By "Me" I mean me, the author..  if you're really paranoid you still have plenty of others to worry about ;)
+ 
+
+
+NOTE: Some web email services add in extra spaces in the middle of lines which will break your encoded block. 
+This seems to be intentional. New version removes spaces before decrypting.
